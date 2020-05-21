@@ -1,0 +1,595 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="meriendaone_regular.ttf">
+            <string>MeriendaOne-Regular</string>
+        </array>
+        <array key="ubuntu_bold.ttf">
+            <string>Ubuntu-Bold</string>
+        </array>
+        <array key="ubuntu_regular.ttf">
+            <string>Ubuntu-Regular</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Menu View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="MenuViewController" customModule="Mice" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="5Az-tr-MWi">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <variation key="heightClass=compact-widthClass=compact" image="background_land"/>
+                                <variation key="heightClass=compact-widthClass=regular" image="background_land"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo_main" translatesAutoresizingMaskIntoConstraints="NO" id="PbN-u9-zNU">
+                                <rect key="frame" x="-47" y="120" width="469" height="100"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="Nxa-aK-MCO" userLabel="menu">
+                                <rect key="frame" x="65.5" y="289" width="244" height="267"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Oqp-sS-Y4P" userLabel="new game">
+                                        <rect key="frame" x="0.0" y="0.0" width="244" height="40.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New game" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="XLd-Ye-z0S" customClass="AutoresizeLabel" customModule="Mice" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="198.5" height="40.5"/>
+                                                <fontDescription key="fontDescription" name="MeriendaOne-Regular" family="Merienda One" pointSize="20"/>
+                                                <color key="textColor" red="0.84313725490196079" green="0.80000000000000004" blue="0.78431372549019607" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="value">
+                                                        <real key="value" value="0.0"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="minTextSize">
+                                                        <real key="value" value="20"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="maxTextSize">
+                                                        <real key="value" value="28"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </label>
+                                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="player_two" translatesAutoresizingMaskIntoConstraints="NO" id="f7n-GV-USn">
+                                                <rect key="frame" x="198.5" y="0.0" width="45.5" height="40.5"/>
+                                                <gestureRecognizers/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="f7n-GV-USn" secondAttribute="height" multiplier="1.12:1" id="FDn-E4-mYp"/>
+                                                </constraints>
+                                                <connections>
+                                                    <outletCollection property="gestureRecognizers" destination="xoJ-QO-V37" appends="YES" id="Yw7-PM-Xlr"/>
+                                                </connections>
+                                            </imageView>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2l0-AX-1zc" userLabel="continue">
+                                        <rect key="frame" x="0.0" y="56.5" width="244" height="40.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Continue" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1dG-Pt-SOA" customClass="AutoresizeLabel" customModule="Mice" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="198.5" height="40.5"/>
+                                                <fontDescription key="fontDescription" name="MeriendaOne-Regular" family="Merienda One" pointSize="20"/>
+                                                <color key="textColor" red="0.84313725490196079" green="0.80000000000000004" blue="0.78431372549019607" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="minTextSize">
+                                                        <real key="value" value="20"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="maxTextSize">
+                                                        <real key="value" value="28"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </label>
+                                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="player_one" translatesAutoresizingMaskIntoConstraints="NO" id="mYr-jN-gQt">
+                                                <rect key="frame" x="198.5" y="0.0" width="45.5" height="40.5"/>
+                                                <gestureRecognizers/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="mYr-jN-gQt" secondAttribute="height" multiplier="1.12:1" id="WZo-7s-HFg"/>
+                                                </constraints>
+                                                <connections>
+                                                    <outletCollection property="gestureRecognizers" destination="fKZ-dk-e9b" appends="YES" id="5jG-dE-rXB"/>
+                                                </connections>
+                                            </imageView>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WXh-my-zPl" userLabel="Players">
+                                        <rect key="frame" x="0.0" y="113" width="244" height="40.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Players" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iYs-sb-sFy" customClass="AutoresizeLabel" customModule="Mice" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="198.5" height="40.5"/>
+                                                <fontDescription key="fontDescription" name="MeriendaOne-Regular" family="Merienda One" pointSize="20"/>
+                                                <color key="textColor" red="0.84313725490196079" green="0.80000000000000004" blue="0.78431372549019607" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="minTextSize">
+                                                        <real key="value" value="20"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="maxTextSize">
+                                                        <real key="value" value="28"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </label>
+                                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="player_two" translatesAutoresizingMaskIntoConstraints="NO" id="pqu-SD-WpI">
+                                                <rect key="frame" x="198.5" y="0.0" width="45.5" height="40.5"/>
+                                                <gestureRecognizers/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="pqu-SD-WpI" secondAttribute="height" multiplier="1.12:1" id="N7d-uF-9BM"/>
+                                                </constraints>
+                                                <connections>
+                                                    <outletCollection property="gestureRecognizers" destination="T36-CE-NAT" appends="YES" id="NT8-54-RxN"/>
+                                                </connections>
+                                            </imageView>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jsO-oX-mJz" userLabel="Rules">
+                                        <rect key="frame" x="0.0" y="169.5" width="244" height="41"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rules" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="soT-1H-Q62" customClass="AutoresizeLabel" customModule="Mice" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="198.5" height="41"/>
+                                                <fontDescription key="fontDescription" name="MeriendaOne-Regular" family="Merienda One" pointSize="20"/>
+                                                <color key="textColor" red="0.84313725490196079" green="0.80000000000000004" blue="0.78431372549019607" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="minTextSize">
+                                                        <real key="value" value="20"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="maxTextSize">
+                                                        <real key="value" value="28"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </label>
+                                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="player_one" translatesAutoresizingMaskIntoConstraints="NO" id="pf8-Zc-bLS">
+                                                <rect key="frame" x="198.5" y="0.0" width="45.5" height="41"/>
+                                                <gestureRecognizers/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="pf8-Zc-bLS" secondAttribute="height" multiplier="1.12:1" id="Pol-qZ-kmS"/>
+                                                </constraints>
+                                                <connections>
+                                                    <outletCollection property="gestureRecognizers" destination="V2Y-cA-SRe" appends="YES" id="QCA-VO-42f"/>
+                                                </connections>
+                                            </imageView>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YAt-MJ-P8y" userLabel="Exit">
+                                        <rect key="frame" x="0.0" y="226.5" width="244" height="40.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Exit" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iLk-53-dgK" customClass="AutoresizeLabel" customModule="Mice" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="198.5" height="40.5"/>
+                                                <fontDescription key="fontDescription" name="MeriendaOne-Regular" family="Merienda One" pointSize="20"/>
+                                                <color key="textColor" red="0.84313725490196079" green="0.80000000000000004" blue="0.78431372549019607" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="minTextSize">
+                                                        <real key="value" value="20"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="maxTextSize">
+                                                        <real key="value" value="28"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </label>
+                                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="player_two" translatesAutoresizingMaskIntoConstraints="NO" id="QjP-8Y-mYm">
+                                                <rect key="frame" x="198.5" y="0.0" width="45.5" height="40.5"/>
+                                                <gestureRecognizers/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="QjP-8Y-mYm" secondAttribute="height" multiplier="1.12:1" id="PDG-CK-ycF"/>
+                                                </constraints>
+                                                <connections>
+                                                    <outletCollection property="gestureRecognizers" destination="p5e-jO-rtU" appends="YES" id="kkb-gW-O2A"/>
+                                                </connections>
+                                            </imageView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Nxa-aK-MCO" firstAttribute="height" secondItem="6Tk-OE-BBY" secondAttribute="height" multiplier="0.65" id="2Xq-dg-RtN"/>
+                            <constraint firstItem="PbN-u9-zNU" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" multiplier="1.5" id="5iI-KL-rL2"/>
+                            <constraint firstItem="Nxa-aK-MCO" firstAttribute="width" secondItem="6Tk-OE-BBY" secondAttribute="width" multiplier="0.35" id="6hH-P5-YN8"/>
+                            <constraint firstItem="PbN-u9-zNU" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="bottom" multiplier="0.18" id="A1V-Aq-tip"/>
+                            <constraint firstItem="Nxa-aK-MCO" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" multiplier="0.6" id="Cqs-dG-nes"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Nxa-aK-MCO" secondAttribute="bottom" multiplier="1.2" id="GyR-xh-WXe"/>
+                            <constraint firstItem="Nxa-aK-MCO" firstAttribute="width" secondItem="6Tk-OE-BBY" secondAttribute="width" multiplier="0.65" id="MXQ-BZ-T2s"/>
+                            <constraint firstItem="PbN-u9-zNU" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="TnG-fj-4WS"/>
+                            <constraint firstItem="PbN-u9-zNU" firstAttribute="height" secondItem="6Tk-OE-BBY" secondAttribute="height" multiplier="0.36" id="ePo-sR-Jch"/>
+                            <constraint firstItem="PbN-u9-zNU" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="kRU-5j-fBr"/>
+                            <constraint firstItem="Nxa-aK-MCO" firstAttribute="height" secondItem="6Tk-OE-BBY" secondAttribute="height" multiplier="0.4" id="l4g-KS-Cvp"/>
+                            <constraint firstItem="PbN-u9-zNU" firstAttribute="height" secondItem="6Tk-OE-BBY" secondAttribute="height" multiplier="0.15" id="qKG-vJ-flu"/>
+                            <constraint firstItem="Nxa-aK-MCO" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ynC-ez-t1x"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="5iI-KL-rL2"/>
+                                <exclude reference="ePo-sR-Jch"/>
+                                <exclude reference="kRU-5j-fBr"/>
+                                <exclude reference="2Xq-dg-RtN"/>
+                                <exclude reference="6hH-P5-YN8"/>
+                                <exclude reference="Cqs-dG-nes"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=compact-widthClass=compact">
+                            <mask key="constraints">
+                                <include reference="5iI-KL-rL2"/>
+                                <exclude reference="A1V-Aq-tip"/>
+                                <exclude reference="TnG-fj-4WS"/>
+                                <include reference="ePo-sR-Jch"/>
+                                <include reference="kRU-5j-fBr"/>
+                                <exclude reference="qKG-vJ-flu"/>
+                                <include reference="2Xq-dg-RtN"/>
+                                <include reference="6hH-P5-YN8"/>
+                                <include reference="Cqs-dG-nes"/>
+                                <exclude reference="MXQ-BZ-T2s"/>
+                                <exclude reference="l4g-KS-Cvp"/>
+                                <exclude reference="ynC-ez-t1x"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=compact-widthClass=regular">
+                            <mask key="constraints">
+                                <include reference="5iI-KL-rL2"/>
+                                <exclude reference="A1V-Aq-tip"/>
+                                <exclude reference="TnG-fj-4WS"/>
+                                <include reference="ePo-sR-Jch"/>
+                                <include reference="kRU-5j-fBr"/>
+                                <exclude reference="qKG-vJ-flu"/>
+                                <include reference="2Xq-dg-RtN"/>
+                                <include reference="6hH-P5-YN8"/>
+                                <include reference="Cqs-dG-nes"/>
+                                <exclude reference="MXQ-BZ-T2s"/>
+                                <exclude reference="l4g-KS-Cvp"/>
+                                <exclude reference="ynC-ez-t1x"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <navigationItem key="navigationItem" id="P0N-B6-RNn"/>
+                    <connections>
+                        <segue destination="RBT-Uy-2Ki" kind="presentation" identifier="showRules" modalPresentationStyle="fullScreen" id="dCS-ts-1cc"/>
+                        <segue destination="BCi-PT-8xa" kind="presentation" identifier="showPlayers" modalPresentationStyle="fullScreen" id="aKV-ll-aoz"/>
+                        <segue destination="b5P-CN-9nc" kind="presentation" identifier="showNewGame" modalPresentationStyle="fullScreen" id="3pS-pB-2Uf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="p5e-jO-rtU" userLabel="Exit Tap Gesture Recognizer">
+                    <connections>
+                        <action selector="exitTapped:" destination="BYZ-38-t0r" id="1nR-hI-nxb"/>
+                        <outlet property="delegate" destination="BYZ-38-t0r" id="DgW-ka-YZK"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="V2Y-cA-SRe" userLabel="Rules Tap Gesture Recognizer">
+                    <connections>
+                        <action selector="rulesTapped:" destination="BYZ-38-t0r" id="tPo-3U-Bab"/>
+                        <outlet property="delegate" destination="BYZ-38-t0r" id="vwO-NM-CzA"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="T36-CE-NAT" userLabel="Players Tap Gesture Recognizer">
+                    <connections>
+                        <action selector="playersTapped:" destination="BYZ-38-t0r" id="hWX-Vf-DQO"/>
+                        <outlet property="delegate" destination="BYZ-38-t0r" id="2pe-5X-Tba"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="xoJ-QO-V37" userLabel="New Game Tap Gesture Recognizer">
+                    <connections>
+                        <action selector="newGameTapped:" destination="BYZ-38-t0r" id="Wpk-O9-Q5B"/>
+                        <outlet property="delegate" destination="BYZ-38-t0r" id="pd9-OL-dmm"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="fKZ-dk-e9b" userLabel="Continue Tap Gesture Recognizer">
+                    <connections>
+                        <action selector="continueTapped:" destination="BYZ-38-t0r" id="a5j-HI-FlA"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="89.732142857142847"/>
+        </scene>
+        <!--Rules View Controller-->
+        <scene sceneID="mt8-OD-mH0">
+            <objects>
+                <viewController id="RBT-Uy-2Ki" customClass="RulesViewController" customModule="Mice" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cbU-qX-dgh">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="SxK-Cy-Xcy">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <variation key="heightClass=compact-widthClass=compact" image="background_land"/>
+                                <variation key="heightClass=compact-widthClass=regular" image="background_land"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="z8y-Wc-rsf">
+                                <rect key="frame" x="84" y="46.5" width="207" height="40"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="nxy-ce-07J">
+                                        <rect key="frame" x="0.0" y="0.0" width="40.5" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="nxy-ce-07J" secondAttribute="height" multiplier="1:1" id="AvW-vE-t5J"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rules of the game" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2GP-V8-5Ou" customClass="AutoresizeLabel" customModule="Mice" customModuleProvider="target">
+                                        <rect key="frame" x="44.5" y="0.0" width="162.5" height="40"/>
+                                        <fontDescription key="fontDescription" name="MeriendaOne-Regular" family="Merienda One" pointSize="20"/>
+                                        <color key="textColor" red="0.84313725490000002" green="0.80000000000000004" blue="0.7843137255" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="minTextSize">
+                                                <real key="value" value="18"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="maxTextSize">
+                                                <real key="value" value="26"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.5" contentMode="scaleToFill" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p83-Hi-5GN" customClass="AutoresizeTextView" customModule="Mice" customModuleProvider="target">
+                                <rect key="frame" x="28" y="100" width="319" height="500.5"/>
+                                <string key="text">     MICA is one of the oldest social games that has stayed popular until today thanks to her simplicity. It is played by two players. Each of them has nine tokens which they place intermittently on the fields on the playing board. After placing tokens on the playing board, the players move one after the other their tokens vertically or horizontally only one field at a time. Playing diagonally does not count. At the moment where a player scores MICA, he or she takes any of the opponent’s tokens which is not in MICA. The game is played until one of the players is completely unable to score MICA.</string>
+                                <color key="textColor" red="0.84313725490000002" green="0.80000000000000004" blue="0.7843137255" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Ubuntu-Regular" family="Ubuntu" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="minTextSize">
+                                        <real key="value" value="17"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="maxTextSize">
+                                        <real key="value" value="24"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textView>
+                            <button opaque="NO" alpha="0.5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wE4-fg-KnZ" customClass="AutoresizeButton" customModule="Mice" customModuleProvider="target">
+                                <rect key="frame" x="19" y="626.5" width="39" height="32"/>
+                                <fontDescription key="fontDescription" name="Ubuntu-Bold" family="Ubuntu" pointSize="17"/>
+                                <state key="normal" title="Back"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="minTextSize">
+                                        <real key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="maxTextSize">
+                                        <real key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="dismiss" destination="RBT-Uy-2Ki" eventType="touchUpInside" id="weH-sB-LAB"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="nxy-ce-07J" firstAttribute="height" secondItem="9qV-D0-B9S" secondAttribute="height" multiplier="0.12" id="1l8-sD-Za6"/>
+                            <constraint firstItem="z8y-Wc-rsf" firstAttribute="centerY" secondItem="cbU-qX-dgh" secondAttribute="centerY" multiplier="0.2" id="O7Z-iL-54x"/>
+                            <constraint firstItem="z8y-Wc-rsf" firstAttribute="width" relation="lessThanOrEqual" secondItem="9qV-D0-B9S" secondAttribute="width" multiplier="0.8" id="TFX-y3-rho"/>
+                            <constraint firstItem="p83-Hi-5GN" firstAttribute="centerY" secondItem="9qV-D0-B9S" secondAttribute="centerY" multiplier="1.05" id="Y0Y-s9-ozq"/>
+                            <constraint firstItem="nxy-ce-07J" firstAttribute="height" secondItem="9qV-D0-B9S" secondAttribute="height" multiplier="0.06" id="YB9-h5-xB3"/>
+                            <constraint firstItem="p83-Hi-5GN" firstAttribute="height" secondItem="9qV-D0-B9S" secondAttribute="height" multiplier="0.75" id="acy-Nc-O84"/>
+                            <constraint firstItem="p83-Hi-5GN" firstAttribute="width" secondItem="9qV-D0-B9S" secondAttribute="width" multiplier="0.85" id="epF-Lu-5FG"/>
+                            <constraint firstItem="p83-Hi-5GN" firstAttribute="centerX" secondItem="9qV-D0-B9S" secondAttribute="centerX" id="f5B-NX-fC0"/>
+                            <constraint firstItem="wE4-fg-KnZ" firstAttribute="leading" secondItem="9qV-D0-B9S" secondAttribute="trailing" multiplier="0.05" id="fdt-kZ-tD2"/>
+                            <constraint firstItem="wE4-fg-KnZ" firstAttribute="bottom" secondItem="9qV-D0-B9S" secondAttribute="bottom" multiplier="0.987" id="vQ4-ea-7Xo"/>
+                            <constraint firstItem="z8y-Wc-rsf" firstAttribute="centerX" secondItem="9qV-D0-B9S" secondAttribute="centerX" id="yK0-h9-AWZ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="9qV-D0-B9S"/>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="1l8-sD-Za6"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=compact-widthClass=compact">
+                            <mask key="constraints">
+                                <include reference="1l8-sD-Za6"/>
+                                <exclude reference="YB9-h5-xB3"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=compact-widthClass=regular">
+                            <mask key="constraints">
+                                <include reference="1l8-sD-Za6"/>
+                                <exclude reference="YB9-h5-xB3"/>
+                            </mask>
+                        </variation>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Dde-rX-Hhw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1216.875" y="88.732394366197184"/>
+        </scene>
+        <!--Game-->
+        <scene sceneID="Mfe-5m-CpV">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Game" id="b5P-CN-9nc" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1qf-Kg-7vk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="138" y="671"/>
+        </scene>
+        <!--Players View Controller-->
+        <scene sceneID="Xy6-lW-SFa">
+            <objects>
+                <viewController id="BCi-PT-8xa" customClass="PlayersViewController" customModule="Mice" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2qm-3o-XlQ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="2aX-Jf-TP5">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <variation key="heightClass=compact-widthClass=compact" image="background_land"/>
+                                <variation key="heightClass=compact-widthClass=regular" image="background_land"/>
+                            </imageView>
+                            <button opaque="NO" alpha="0.5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nd4-dg-c0U" customClass="AutoresizeButton" customModule="Mice" customModuleProvider="target">
+                                <rect key="frame" x="19" y="626.5" width="39" height="32"/>
+                                <fontDescription key="fontDescription" name="Ubuntu-Bold" family="Ubuntu" pointSize="17"/>
+                                <state key="normal" title="Back">
+                                    <color key="titleColor" red="0.84313725490000002" green="0.80000000000000004" blue="0.7843137255" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="minTextSize">
+                                        <real key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="maxTextSize">
+                                        <real key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="dismiss" destination="BCi-PT-8xa" eventType="touchUpInside" id="pS8-al-oZI"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="Jfi-SO-fYp" userLabel="title">
+                                <rect key="frame" x="70.5" y="247" width="234" height="40"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="hN0-gl-Kd3">
+                                        <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="hN0-gl-Kd3" secondAttribute="height" multiplier="1:1" id="wRa-3o-iuT"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Names of the players" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iXz-ed-hsf" customClass="AutoresizeLabel" customModule="Mice" customModuleProvider="target">
+                                        <rect key="frame" x="44" y="0.0" width="190" height="40"/>
+                                        <fontDescription key="fontDescription" name="MeriendaOne-Regular" family="Merienda One" pointSize="20"/>
+                                        <color key="textColor" red="0.84313725490000002" green="0.80000000000000004" blue="0.7843137255" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="minTextSize">
+                                                <real key="value" value="20"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="maxTextSize">
+                                                <real key="value" value="30"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="raE-jG-2Oc" userLabel="player one stack">
+                                <rect key="frame" x="37.5" y="312" width="300" height="43"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="player_one" translatesAutoresizingMaskIntoConstraints="NO" id="M2m-yC-uxE">
+                                        <rect key="frame" x="0.0" y="0.0" width="82.5" height="43"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="M2m-yC-uxE" secondAttribute="height" multiplier="1.9:1" id="DYv-QT-vfL"/>
+                                        </constraints>
+                                    </imageView>
+                                    <textField opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IdO-6H-QI0">
+                                        <rect key="frame" x="96.5" y="0.0" width="203.5" height="31"/>
+                                        <color key="tintColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="textColor" red="0.84313725490000002" green="0.80000000000000004" blue="0.7843137255" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="Ubuntu-Regular" family="Ubuntu" pointSize="26"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="qqE-bk-23v" userLabel="player two stack">
+                                <rect key="frame" x="37.5" y="371" width="300" height="43.5"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="player_two" translatesAutoresizingMaskIntoConstraints="NO" id="Kqk-0u-l3v">
+                                        <rect key="frame" x="0.0" y="0.0" width="82.5" height="43.5"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="Kqk-0u-l3v" secondAttribute="height" multiplier="1.9:1" id="XzI-BU-OJd"/>
+                                        </constraints>
+                                    </imageView>
+                                    <textField opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9NP-E0-rhh">
+                                        <rect key="frame" x="96.5" y="0.0" width="203.5" height="31"/>
+                                        <color key="tintColor" systemColor="systemBrownColor" red="0.63529411759999999" green="0.51764705879999995" blue="0.36862745099999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="textColor" red="0.84313725490000002" green="0.80000000000000004" blue="0.7843137255" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="Ubuntu-Regular" family="Ubuntu" pointSize="26"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="raE-jG-2Oc" firstAttribute="centerY" secondItem="Pjo-VF-qMC" secondAttribute="centerY" multiplier="0.95" id="0uE-cs-nyo"/>
+                            <constraint firstItem="hN0-gl-Kd3" firstAttribute="height" secondItem="Pjo-VF-qMC" secondAttribute="height" multiplier="0.15" id="2Iv-Bw-He4"/>
+                            <constraint firstItem="Jfi-SO-fYp" firstAttribute="centerY" secondItem="Pjo-VF-qMC" secondAttribute="centerY" multiplier="0.6" id="C5Y-tH-HId"/>
+                            <constraint firstItem="raE-jG-2Oc" firstAttribute="centerX" secondItem="Pjo-VF-qMC" secondAttribute="centerX" id="CA8-sM-7DH"/>
+                            <constraint firstItem="M2m-yC-uxE" firstAttribute="height" secondItem="Pjo-VF-qMC" secondAttribute="height" multiplier="0.09" id="IMn-FQ-BLK"/>
+                            <constraint firstItem="Jfi-SO-fYp" firstAttribute="centerX" secondItem="Pjo-VF-qMC" secondAttribute="centerX" id="JBd-Tq-hrs"/>
+                            <constraint firstItem="M2m-yC-uxE" firstAttribute="height" secondItem="Pjo-VF-qMC" secondAttribute="height" multiplier="0.065" id="JCI-xb-DTx"/>
+                            <constraint firstItem="qqE-bk-23v" firstAttribute="centerX" secondItem="Pjo-VF-qMC" secondAttribute="centerX" id="Jqa-jZ-ffx"/>
+                            <constraint firstItem="nd4-dg-c0U" firstAttribute="bottom" secondItem="Pjo-VF-qMC" secondAttribute="bottom" multiplier="0.987" id="MWc-Gb-41I"/>
+                            <constraint firstItem="hN0-gl-Kd3" firstAttribute="height" secondItem="Pjo-VF-qMC" secondAttribute="height" multiplier="0.06" id="O5J-Pz-2wA"/>
+                            <constraint firstItem="nd4-dg-c0U" firstAttribute="leading" secondItem="Pjo-VF-qMC" secondAttribute="trailing" multiplier="0.05" id="Oat-AL-n6T"/>
+                            <constraint firstItem="Kqk-0u-l3v" firstAttribute="height" secondItem="Pjo-VF-qMC" secondAttribute="height" multiplier="0.065" id="TmY-Nn-3Dc"/>
+                            <constraint firstItem="Jfi-SO-fYp" firstAttribute="centerY" secondItem="Pjo-VF-qMC" secondAttribute="centerY" multiplier="0.8" id="Tos-1X-ecj"/>
+                            <constraint firstItem="raE-jG-2Oc" firstAttribute="centerY" secondItem="Pjo-VF-qMC" secondAttribute="centerY" id="Xo3-tg-00Z"/>
+                            <constraint firstItem="qqE-bk-23v" firstAttribute="top" secondItem="raE-jG-2Oc" secondAttribute="bottom" constant="16" id="Y0Z-X6-Hlc"/>
+                            <constraint firstItem="qqE-bk-23v" firstAttribute="width" secondItem="Pjo-VF-qMC" secondAttribute="width" multiplier="0.8" id="YY4-wP-U1h"/>
+                            <constraint firstItem="Kqk-0u-l3v" firstAttribute="height" secondItem="Pjo-VF-qMC" secondAttribute="height" multiplier="0.09" id="cwo-a8-nVe"/>
+                            <constraint firstItem="raE-jG-2Oc" firstAttribute="width" secondItem="Pjo-VF-qMC" secondAttribute="width" multiplier="0.8" id="ghf-mj-Gsi"/>
+                            <constraint firstItem="raE-jG-2Oc" firstAttribute="width" secondItem="Pjo-VF-qMC" secondAttribute="width" multiplier="0.4" id="n0z-4K-Xsf"/>
+                            <constraint firstItem="qqE-bk-23v" firstAttribute="width" secondItem="Pjo-VF-qMC" secondAttribute="width" multiplier="0.4" id="zV2-QO-aWH"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Pjo-VF-qMC"/>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="C5Y-tH-HId"/>
+                                <exclude reference="2Iv-Bw-He4"/>
+                                <exclude reference="IMn-FQ-BLK"/>
+                                <exclude reference="0uE-cs-nyo"/>
+                                <exclude reference="n0z-4K-Xsf"/>
+                                <exclude reference="cwo-a8-nVe"/>
+                                <exclude reference="zV2-QO-aWH"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=compact-widthClass=compact">
+                            <mask key="constraints">
+                                <include reference="C5Y-tH-HId"/>
+                                <exclude reference="Tos-1X-ecj"/>
+                                <include reference="2Iv-Bw-He4"/>
+                                <exclude reference="O5J-Pz-2wA"/>
+                                <include reference="IMn-FQ-BLK"/>
+                                <exclude reference="JCI-xb-DTx"/>
+                                <include reference="0uE-cs-nyo"/>
+                                <exclude reference="Xo3-tg-00Z"/>
+                                <exclude reference="ghf-mj-Gsi"/>
+                                <include reference="n0z-4K-Xsf"/>
+                                <exclude reference="TmY-Nn-3Dc"/>
+                                <include reference="cwo-a8-nVe"/>
+                                <exclude reference="YY4-wP-U1h"/>
+                                <include reference="zV2-QO-aWH"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=compact-widthClass=regular">
+                            <mask key="constraints">
+                                <include reference="C5Y-tH-HId"/>
+                                <exclude reference="Tos-1X-ecj"/>
+                                <include reference="2Iv-Bw-He4"/>
+                                <exclude reference="O5J-Pz-2wA"/>
+                                <include reference="IMn-FQ-BLK"/>
+                                <exclude reference="JCI-xb-DTx"/>
+                                <include reference="0uE-cs-nyo"/>
+                                <exclude reference="Xo3-tg-00Z"/>
+                                <exclude reference="ghf-mj-Gsi"/>
+                                <include reference="n0z-4K-Xsf"/>
+                                <exclude reference="TmY-Nn-3Dc"/>
+                                <include reference="cwo-a8-nVe"/>
+                                <exclude reference="YY4-wP-U1h"/>
+                                <include reference="zV2-QO-aWH"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="playerOne" destination="IdO-6H-QI0" id="DUG-ma-dkd"/>
+                        <outlet property="playerTwo" destination="9NP-E0-rhh" id="cX9-el-NBX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CU7-In-DPP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1209.375" y="780.63380281690138"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="background" width="540" height="960"/>
+        <image name="background_land" width="960" height="540"/>
+        <image name="logo" width="256" height="256"/>
+        <image name="logo_main" width="234.5" height="169"/>
+        <image name="player_one" width="95" height="65"/>
+        <image name="player_two" width="95" height="65"/>
+    </resources>
+</document>

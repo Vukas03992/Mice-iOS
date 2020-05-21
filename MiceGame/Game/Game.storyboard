@@ -1,0 +1,335 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="mw8-H0-nrO">
+    <device id="retina4_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="permanentmarker_regular.ttf">
+            <string>PermanentMarker-Regular</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Game View Controller-->
+        <scene sceneID="RQB-0i-uCn">
+            <objects>
+                <viewController id="mw8-H0-nrO" customClass="GameViewController" customModule="Mice" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="rVc-gE-d1k">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="pLm-uh-WcV" userLabel="background">
+                                <rect key="frame" x="0.0" y="-5" width="320" height="573"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <variation key="heightClass=compact-widthClass=compact" image="background_land"/>
+                                <variation key="heightClass=compact-widthClass=regular" image="background_land"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="blackboard" translatesAutoresizingMaskIntoConstraints="NO" id="e1f-JH-ZLl" userLabel="blackboard_player_two">
+                                <rect key="frame" x="32" y="18" width="256" height="106.5"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="blackboard" translatesAutoresizingMaskIntoConstraints="NO" id="LM2-XQ-OzT" userLabel="blackboard_player_one">
+                                <rect key="frame" x="32" y="415.5" width="256" height="106.5"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="playground" translatesAutoresizingMaskIntoConstraints="NO" id="Yaa-gT-Rs0">
+                                <rect key="frame" x="16" y="0.0" width="288" height="540"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6vZ-Ex-I2S" userLabel="board_two">
+                                <rect key="frame" x="45" y="49.5" width="230" height="43"/>
+                                <subviews>
+                                    <stackView opaque="NO" tag="2" contentMode="scaleToFill" horizontalHuggingPriority="251" horizontalCompressionResistancePriority="700" axis="vertical" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="XhG-Vm-sAI" userLabel="tokens">
+                                        <rect key="frame" x="0.0" y="0.0" width="51" height="43"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.29999999999999999" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="200" verticalCompressionResistancePriority="775" text="More: 9" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RS7-5A-brf">
+                                                <rect key="frame" x="0.0" y="0.0" width="51" height="15"/>
+                                                <fontDescription key="fontDescription" name="PermanentMarker-Regular" family="Permanent Marker" pointSize="10"/>
+                                                <color key="textColor" red="0.84313725490196079" green="0.80000000000000004" blue="0.78431372549019607" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="2" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="275" verticalCompressionResistancePriority="700" image="basket_player_two" translatesAutoresizingMaskIntoConstraints="NO" id="HSl-tM-7sP">
+                                                <rect key="frame" x="0.0" y="17" width="51" height="26"/>
+                                                <gestureRecognizers/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="HSl-tM-7sP" secondAttribute="height" multiplier="2:1" id="L6X-fX-HkV"/>
+                                                </constraints>
+                                                <connections>
+                                                    <outletCollection property="gestureRecognizers" destination="0aF-UY-QVs" appends="YES" id="ddw-bw-gOc"/>
+                                                </connections>
+                                            </imageView>
+                                        </subviews>
+                                    </stackView>
+                                    <label opaque="NO" userInteractionEnabled="NO" alpha="0.29999999999999999" contentMode="left" verticalHuggingPriority="251" text="Player Two" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eYx-Qv-jlZ">
+                                        <rect key="frame" x="51" y="0.0" width="179" height="43"/>
+                                        <fontDescription key="fontDescription" name="PermanentMarker-Regular" family="Permanent Marker" pointSize="15"/>
+                                        <color key="textColor" red="0.84313725490000002" green="0.80000000000000004" blue="0.7843137255" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a0T-xV-H9B" userLabel="board_one">
+                                <rect key="frame" x="45" y="447.5" width="230" height="42.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" alpha="0.30000001192092896" contentMode="left" verticalHuggingPriority="251" text="Player Two - YOU TURN" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AuQ-b4-Dz2" userLabel="Player One">
+                                        <rect key="frame" x="0.0" y="0.0" width="179" height="42.5"/>
+                                        <fontDescription key="fontDescription" name="PermanentMarker-Regular" family="Permanent Marker" pointSize="15"/>
+                                        <color key="textColor" red="0.84313725490000002" green="0.80000000000000004" blue="0.7843137255" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" tag="1" contentMode="scaleToFill" horizontalHuggingPriority="251" horizontalCompressionResistancePriority="700" axis="vertical" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="7UR-9y-Q98" userLabel="tokens one">
+                                        <rect key="frame" x="179" y="0.0" width="51" height="42.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.30000001192092896" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="200" verticalCompressionResistancePriority="775" text="More: 9" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hEf-mW-Igb">
+                                                <rect key="frame" x="0.0" y="0.0" width="51" height="15"/>
+                                                <fontDescription key="fontDescription" name="PermanentMarker-Regular" family="Permanent Marker" pointSize="10"/>
+                                                <color key="textColor" red="0.84313725490000002" green="0.80000000000000004" blue="0.7843137255" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="275" verticalCompressionResistancePriority="700" image="basket_player_one" translatesAutoresizingMaskIntoConstraints="NO" id="L2i-II-akz">
+                                                <rect key="frame" x="0.0" y="17" width="51" height="25.5"/>
+                                                <gestureRecognizers/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="L2i-II-akz" secondAttribute="height" multiplier="2:1" id="asa-F6-Dbs"/>
+                                                </constraints>
+                                                <connections>
+                                                    <outletCollection property="gestureRecognizers" destination="dPs-um-QqQ" appends="YES" id="bpD-Ma-DPm"/>
+                                                </connections>
+                                            </imageView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background_toolbar" translatesAutoresizingMaskIntoConstraints="NO" id="Ugd-HW-oXW">
+                                <rect key="frame" x="0.0" y="528" width="320" height="40"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="2MM-eT-qRY" userLabel="Bottom menu">
+                                <rect key="frame" x="0.0" y="534" width="320" height="28.5"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_menu" translatesAutoresizingMaskIntoConstraints="NO" id="2nz-fh-1bH">
+                                        <rect key="frame" x="0.0" y="0.0" width="106.5" height="28.5"/>
+                                        <gestureRecognizers/>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="sju-NM-n3x" appends="YES" id="yaD-sm-BkZ"/>
+                                        </connections>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_pause" translatesAutoresizingMaskIntoConstraints="NO" id="KMo-Vt-c6G">
+                                        <rect key="frame" x="106.5" y="0.0" width="107" height="28.5"/>
+                                        <gestureRecognizers/>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="ahu-6v-vPi" appends="YES" id="iD5-0I-5oM"/>
+                                        </connections>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_undo" translatesAutoresizingMaskIntoConstraints="NO" id="uOV-Qj-bTc">
+                                        <rect key="frame" x="213.5" y="0.0" width="106.5" height="28.5"/>
+                                        <gestureRecognizers/>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="37C-ob-jYq" appends="YES" id="3Tc-Ai-pEV"/>
+                                        </connections>
+                                    </imageView>
+                                </subviews>
+                                <variation key="heightClass=compact-widthClass=compact" axis="vertical"/>
+                                <variation key="heightClass=compact-widthClass=regular" axis="vertical"/>
+                            </stackView>
+                            <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_player_one" translatesAutoresizingMaskIntoConstraints="NO" id="g0e-1o-1az" userLabel="movable token">
+                                <rect key="frame" x="0.0" y="0.0" width="29" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="g0e-1o-1az" secondAttribute="height" multiplier="1:1" id="M9u-K4-AK7"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="2MM-eT-qRY" firstAttribute="centerX" secondItem="Jzh-JM-cW3" secondAttribute="centerX" id="1Qs-Hk-5aV"/>
+                            <constraint firstItem="e1f-JH-ZLl" firstAttribute="centerY" secondItem="Jzh-JM-cW3" secondAttribute="centerY" multiplier="0.25" id="37y-l3-6RL"/>
+                            <constraint firstItem="e1f-JH-ZLl" firstAttribute="centerX" secondItem="Jzh-JM-cW3" secondAttribute="centerX" multiplier="1.5" id="3Xu-gM-EcS"/>
+                            <constraint firstItem="Yaa-gT-Rs0" firstAttribute="height" secondItem="Jzh-JM-cW3" secondAttribute="height" multiplier="0.8" id="4G8-x3-7Lc"/>
+                            <constraint firstItem="Jzh-JM-cW3" firstAttribute="bottom" secondItem="2MM-eT-qRY" secondAttribute="bottom" multiplier="1.01" id="4f1-gr-iCk"/>
+                            <constraint firstItem="g0e-1o-1az" firstAttribute="top" secondItem="Jzh-JM-cW3" secondAttribute="top" id="6Wu-sI-1EL"/>
+                            <constraint firstItem="2MM-eT-qRY" firstAttribute="leading" secondItem="Jzh-JM-cW3" secondAttribute="leading" id="7Gf-5Z-qbf"/>
+                            <constraint firstItem="Yaa-gT-Rs0" firstAttribute="centerY" secondItem="Jzh-JM-cW3" secondAttribute="centerY" id="7Xy-5F-JQx"/>
+                            <constraint firstItem="a0T-xV-H9B" firstAttribute="centerX" secondItem="Jzh-JM-cW3" secondAttribute="centerX" multiplier="1.5" id="AWx-Nv-3ak"/>
+                            <constraint firstItem="Ugd-HW-oXW" firstAttribute="centerX" secondItem="Jzh-JM-cW3" secondAttribute="centerX" id="BmG-Gv-6EJ"/>
+                            <constraint firstItem="2MM-eT-qRY" firstAttribute="centerY" secondItem="Jzh-JM-cW3" secondAttribute="centerY" id="DPk-5G-EPz"/>
+                            <constraint firstItem="a0T-xV-H9B" firstAttribute="width" secondItem="LM2-XQ-OzT" secondAttribute="width" multiplier="0.9" id="Dgb-8e-zBd"/>
+                            <constraint firstItem="Yaa-gT-Rs0" firstAttribute="centerX" secondItem="Jzh-JM-cW3" secondAttribute="centerX" multiplier="0.6" id="Dp5-h3-BGY"/>
+                            <constraint firstItem="Ugd-HW-oXW" firstAttribute="leading" secondItem="Jzh-JM-cW3" secondAttribute="leading" id="GoF-mg-YBC"/>
+                            <constraint firstItem="a0T-xV-H9B" firstAttribute="height" secondItem="LM2-XQ-OzT" secondAttribute="height" multiplier="0.4" id="Ixx-IS-Cbe"/>
+                            <constraint firstItem="e1f-JH-ZLl" firstAttribute="centerX" secondItem="Jzh-JM-cW3" secondAttribute="centerX" id="Kka-c6-RTj"/>
+                            <constraint firstItem="LM2-XQ-OzT" firstAttribute="centerY" secondItem="Jzh-JM-cW3" secondAttribute="centerY" multiplier="1.3" id="MQC-G0-Zlm"/>
+                            <constraint firstItem="2MM-eT-qRY" firstAttribute="width" secondItem="Jzh-JM-cW3" secondAttribute="width" id="Mwh-qz-TY6"/>
+                            <constraint firstItem="Ugd-HW-oXW" firstAttribute="height" secondItem="Jzh-JM-cW3" secondAttribute="height" multiplier="0.07" id="NMb-9O-mJe"/>
+                            <constraint firstItem="a0T-xV-H9B" firstAttribute="centerY" secondItem="Jzh-JM-cW3" secondAttribute="centerY" multiplier="1.65" id="NlE-bU-cL2"/>
+                            <constraint firstItem="Ugd-HW-oXW" firstAttribute="width" secondItem="Jzh-JM-cW3" secondAttribute="width" multiplier="0.05" id="O2m-5Q-9Az"/>
+                            <constraint firstItem="6vZ-Ex-I2S" firstAttribute="height" secondItem="e1f-JH-ZLl" secondAttribute="height" multiplier="0.4" id="RFQ-Yg-3xE"/>
+                            <constraint firstItem="e1f-JH-ZLl" firstAttribute="width" secondItem="Jzh-JM-cW3" secondAttribute="width" multiplier="0.8" id="USG-mx-FID"/>
+                            <constraint firstItem="Ugd-HW-oXW" firstAttribute="height" secondItem="Jzh-JM-cW3" secondAttribute="height" id="Ufg-bE-NDW"/>
+                            <constraint firstItem="g0e-1o-1az" firstAttribute="width" secondItem="Yaa-gT-Rs0" secondAttribute="width" multiplier="0.1" id="V4L-XB-vSx"/>
+                            <constraint firstItem="6vZ-Ex-I2S" firstAttribute="centerY" secondItem="Jzh-JM-cW3" secondAttribute="centerY" multiplier="0.25" id="VSl-O3-KLd"/>
+                            <constraint firstItem="LM2-XQ-OzT" firstAttribute="width" secondItem="Jzh-JM-cW3" secondAttribute="width" multiplier="0.4" id="VeP-gN-aZ0"/>
+                            <constraint firstItem="LM2-XQ-OzT" firstAttribute="centerX" secondItem="Jzh-JM-cW3" secondAttribute="centerX" multiplier="1.5" id="XKY-x7-Oph"/>
+                            <constraint firstItem="Ugd-HW-oXW" firstAttribute="width" secondItem="Jzh-JM-cW3" secondAttribute="width" id="Y6q-fZ-UDj"/>
+                            <constraint firstItem="e1f-JH-ZLl" firstAttribute="width" secondItem="Jzh-JM-cW3" secondAttribute="width" multiplier="0.4" id="Z7d-ar-GRW"/>
+                            <constraint firstItem="a0T-xV-H9B" firstAttribute="centerX" secondItem="Jzh-JM-cW3" secondAttribute="centerX" id="ZIi-41-ukD"/>
+                            <constraint firstItem="Jzh-JM-cW3" firstAttribute="bottom" secondItem="Ugd-HW-oXW" secondAttribute="bottom" id="bEI-KP-yK9"/>
+                            <constraint firstItem="g0e-1o-1az" firstAttribute="leading" secondItem="Jzh-JM-cW3" secondAttribute="leading" id="eKL-gI-1cC"/>
+                            <constraint firstItem="LM2-XQ-OzT" firstAttribute="centerY" secondItem="Jzh-JM-cW3" secondAttribute="centerY" multiplier="1.65" id="hkA-KQ-MQD"/>
+                            <constraint firstItem="Yaa-gT-Rs0" firstAttribute="centerY" secondItem="Jzh-JM-cW3" secondAttribute="centerY" multiplier="0.95" id="idB-lo-CUf"/>
+                            <constraint firstItem="HSl-tM-7sP" firstAttribute="width" secondItem="e1f-JH-ZLl" secondAttribute="width" multiplier="0.2" id="jB7-8P-31y"/>
+                            <constraint firstItem="2MM-eT-qRY" firstAttribute="height" secondItem="Jzh-JM-cW3" secondAttribute="height" multiplier="0.05" id="jeg-JF-psJ"/>
+                            <constraint firstItem="Ugd-HW-oXW" firstAttribute="centerY" secondItem="Jzh-JM-cW3" secondAttribute="centerY" id="kdC-de-KQY"/>
+                            <constraint firstItem="6vZ-Ex-I2S" firstAttribute="width" secondItem="e1f-JH-ZLl" secondAttribute="width" multiplier="0.9" id="lOr-uB-3ZS"/>
+                            <constraint firstItem="6vZ-Ex-I2S" firstAttribute="centerX" secondItem="Jzh-JM-cW3" secondAttribute="centerX" multiplier="1.5" id="mOE-9w-BFK"/>
+                            <constraint firstItem="g0e-1o-1az" firstAttribute="height" secondItem="Yaa-gT-Rs0" secondAttribute="height" multiplier="0.1" id="mxk-Ab-fCn"/>
+                            <constraint firstItem="L2i-II-akz" firstAttribute="width" secondItem="LM2-XQ-OzT" secondAttribute="width" multiplier="0.2" id="oF1-LK-NBd"/>
+                            <constraint firstItem="2MM-eT-qRY" firstAttribute="height" secondItem="Jzh-JM-cW3" secondAttribute="height" id="oe1-YZ-csn"/>
+                            <constraint firstItem="6vZ-Ex-I2S" firstAttribute="centerX" secondItem="Jzh-JM-cW3" secondAttribute="centerX" id="rAy-cJ-p22"/>
+                            <constraint firstItem="LM2-XQ-OzT" firstAttribute="centerX" secondItem="Jzh-JM-cW3" secondAttribute="centerX" id="rhP-KX-AnC"/>
+                            <constraint firstItem="2MM-eT-qRY" firstAttribute="width" secondItem="Jzh-JM-cW3" secondAttribute="width" multiplier="0.05" id="tFO-Yx-n3j"/>
+                            <constraint firstItem="6vZ-Ex-I2S" firstAttribute="centerY" secondItem="Jzh-JM-cW3" secondAttribute="centerY" multiplier="0.7" id="vKd-uh-ixp"/>
+                            <constraint firstItem="a0T-xV-H9B" firstAttribute="centerY" secondItem="Jzh-JM-cW3" secondAttribute="centerY" multiplier="1.3" id="xeL-ZU-h2Z"/>
+                            <constraint firstItem="LM2-XQ-OzT" firstAttribute="width" secondItem="Jzh-JM-cW3" secondAttribute="width" multiplier="0.8" id="y4s-9i-FYM"/>
+                            <constraint firstItem="Yaa-gT-Rs0" firstAttribute="width" secondItem="Jzh-JM-cW3" secondAttribute="width" multiplier="0.9" id="yOM-qh-EMc"/>
+                            <constraint firstItem="Yaa-gT-Rs0" firstAttribute="centerX" secondItem="Jzh-JM-cW3" secondAttribute="centerX" id="ygD-d4-GeP"/>
+                            <constraint firstItem="e1f-JH-ZLl" firstAttribute="centerY" secondItem="Jzh-JM-cW3" secondAttribute="centerY" multiplier="0.7" id="zI5-Qg-emI"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Jzh-JM-cW3"/>
+                        <variation key="heightClass=compact-widthClass=compact">
+                            <mask key="constraints">
+                                <exclude reference="4f1-gr-iCk"/>
+                                <exclude reference="bEI-KP-yK9"/>
+                                <exclude reference="V4L-XB-vSx"/>
+                                <exclude reference="idB-lo-CUf"/>
+                                <exclude reference="yOM-qh-EMc"/>
+                                <exclude reference="ygD-d4-GeP"/>
+                                <exclude reference="37y-l3-6RL"/>
+                                <exclude reference="Kka-c6-RTj"/>
+                                <exclude reference="USG-mx-FID"/>
+                                <exclude reference="VSl-O3-KLd"/>
+                                <exclude reference="rAy-cJ-p22"/>
+                                <exclude reference="hkA-KQ-MQD"/>
+                                <exclude reference="rhP-KX-AnC"/>
+                                <exclude reference="y4s-9i-FYM"/>
+                                <exclude reference="NlE-bU-cL2"/>
+                                <exclude reference="ZIi-41-ukD"/>
+                                <exclude reference="BmG-Gv-6EJ"/>
+                                <exclude reference="NMb-9O-mJe"/>
+                                <exclude reference="Y6q-fZ-UDj"/>
+                                <exclude reference="1Qs-Hk-5aV"/>
+                                <exclude reference="Mwh-qz-TY6"/>
+                                <exclude reference="jeg-JF-psJ"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=compact-widthClass=regular">
+                            <mask key="constraints">
+                                <exclude reference="4f1-gr-iCk"/>
+                                <exclude reference="bEI-KP-yK9"/>
+                                <exclude reference="V4L-XB-vSx"/>
+                                <exclude reference="idB-lo-CUf"/>
+                                <exclude reference="yOM-qh-EMc"/>
+                                <exclude reference="ygD-d4-GeP"/>
+                                <exclude reference="37y-l3-6RL"/>
+                                <exclude reference="Kka-c6-RTj"/>
+                                <exclude reference="USG-mx-FID"/>
+                                <exclude reference="VSl-O3-KLd"/>
+                                <exclude reference="rAy-cJ-p22"/>
+                                <exclude reference="hkA-KQ-MQD"/>
+                                <exclude reference="rhP-KX-AnC"/>
+                                <exclude reference="y4s-9i-FYM"/>
+                                <exclude reference="NlE-bU-cL2"/>
+                                <exclude reference="ZIi-41-ukD"/>
+                                <exclude reference="BmG-Gv-6EJ"/>
+                                <exclude reference="NMb-9O-mJe"/>
+                                <exclude reference="Y6q-fZ-UDj"/>
+                                <exclude reference="1Qs-Hk-5aV"/>
+                                <exclude reference="Mwh-qz-TY6"/>
+                                <exclude reference="jeg-JF-psJ"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="constraints">
+                                <exclude reference="mxk-Ab-fCn"/>
+                                <exclude reference="4G8-x3-7Lc"/>
+                                <exclude reference="7Xy-5F-JQx"/>
+                                <exclude reference="Dp5-h3-BGY"/>
+                                <exclude reference="3Xu-gM-EcS"/>
+                                <exclude reference="Z7d-ar-GRW"/>
+                                <exclude reference="zI5-Qg-emI"/>
+                                <exclude reference="mOE-9w-BFK"/>
+                                <exclude reference="vKd-uh-ixp"/>
+                                <exclude reference="MQC-G0-Zlm"/>
+                                <exclude reference="VeP-gN-aZ0"/>
+                                <exclude reference="XKY-x7-Oph"/>
+                                <exclude reference="AWx-Nv-3ak"/>
+                                <exclude reference="xeL-ZU-h2Z"/>
+                                <exclude reference="GoF-mg-YBC"/>
+                                <exclude reference="O2m-5Q-9Az"/>
+                                <exclude reference="Ufg-bE-NDW"/>
+                                <exclude reference="kdC-de-KQY"/>
+                                <exclude reference="7Gf-5Z-qbf"/>
+                                <exclude reference="DPk-5G-EPz"/>
+                                <exclude reference="oe1-YZ-csn"/>
+                                <exclude reference="tFO-Yx-n3j"/>
+                            </mask>
+                        </variation>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="bBK-PW-bCF" appends="YES" id="Rqq-3o-chO"/>
+                        </connections>
+                    </view>
+                    <connections>
+                        <outlet property="menu" destination="2nz-fh-1bH" id="ue1-A3-TP0"/>
+                        <outlet property="menuTapGesture" destination="sju-NM-n3x" id="evs-S4-w1Q"/>
+                        <outlet property="movableToken" destination="g0e-1o-1az" id="5tx-x6-D2k"/>
+                        <outlet property="pause" destination="KMo-Vt-c6G" id="oM6-89-ZT4"/>
+                        <outlet property="pauseTapGesture" destination="ahu-6v-vPi" id="1dJ-09-z1o"/>
+                        <outlet property="playerOneBusket" destination="L2i-II-akz" id="NjE-wz-7Um"/>
+                        <outlet property="playerOneLabel" destination="AuQ-b4-Dz2" id="w7l-84-sSg"/>
+                        <outlet property="playerOneTokens" destination="hEf-mW-Igb" id="Hxe-C8-63W"/>
+                        <outlet property="playerTwoBasket" destination="HSl-tM-7sP" id="rND-TW-nAK"/>
+                        <outlet property="playerTwoLabel" destination="eYx-Qv-jlZ" id="3Ct-sx-bgP"/>
+                        <outlet property="playerTwoTokens" destination="RS7-5A-brf" id="JAP-Wz-l1z"/>
+                        <outlet property="playground" destination="Yaa-gT-Rs0" id="zaa-yd-d9L"/>
+                        <outlet property="undo" destination="uOV-Qj-bTc" id="gkN-GE-Tw3"/>
+                        <outlet property="undoTapGesture" destination="37C-ob-jYq" id="7YE-PH-0da"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kzd-q7-ofW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="dPs-um-QqQ" userLabel="Player One bascket Pan Gesture Recognizer">
+                    <connections>
+                        <action selector="onPlayerOneBasketTouch:" destination="mw8-H0-nrO" id="IHJ-87-ZkC"/>
+                    </connections>
+                </panGestureRecognizer>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="0aF-UY-QVs" userLabel="Player Two bascket Pan Gesture Recognizer">
+                    <connections>
+                        <action selector="onPlayerOneBasketTouch:" destination="mw8-H0-nrO" id="OX5-dV-A9h"/>
+                        <outlet property="delegate" destination="mw8-H0-nrO" id="YK2-0I-d34"/>
+                    </connections>
+                </panGestureRecognizer>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="bBK-PW-bCF" userLabel="view Pan Gesture Recognizer">
+                    <connections>
+                        <action selector="onPlayerOneBasketTouch:" destination="mw8-H0-nrO" id="P7H-Jb-ggn"/>
+                        <outlet property="delegate" destination="mw8-H0-nrO" id="wCy-Ks-YIL"/>
+                    </connections>
+                </panGestureRecognizer>
+                <tapGestureRecognizer id="ahu-6v-vPi" userLabel="pause Tap Gesture Recognizer"/>
+                <tapGestureRecognizer id="sju-NM-n3x" userLabel="Menu Tap Gesture Recognizer"/>
+                <tapGestureRecognizer id="37C-ob-jYq" userLabel="Undo Tap Gesture Recognizer"/>
+            </objects>
+            <point key="canvasLocation" x="138.38028169014083" y="129.375"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="background" width="540" height="960"/>
+        <image name="background_land" width="960" height="540"/>
+        <image name="background_toolbar" width="540" height="43"/>
+        <image name="basket_player_one" width="113.5" height="57.5"/>
+        <image name="basket_player_two" width="113.5" height="57.5"/>
+        <image name="blackboard" width="461.5" height="106.5"/>
+        <image name="ic_menu" width="43" height="43"/>
+        <image name="ic_pause" width="43" height="43"/>
+        <image name="ic_player_one" width="47" height="47.5"/>
+        <image name="ic_undo" width="43" height="43"/>
+        <image name="playground" width="540" height="540"/>
+    </resources>
+</document>

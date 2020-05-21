@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="ubuntu_regular.ttf">
+            <string>Ubuntu-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="GameMenuView" customModule="Mice" customModuleProvider="target">
+            <connections>
+                <outlet property="exitTapGesture" destination="jmG-fL-f2v" id="ql3-9F-4Os"/>
+                <outlet property="menuLongPressGesture" destination="nX1-ET-8wC" id="s63-Un-4Ab"/>
+                <outlet property="music" destination="OWk-9Z-0LL" id="jW8-4A-jlj"/>
+                <outlet property="musicTapGesture" destination="EXa-vL-PB9" id="Ouw-Fx-Re7"/>
+                <outlet property="sound" destination="Wj8-Zd-gGf" id="OXA-4x-6Uk"/>
+                <outlet property="soundTapGesture" destination="aJl-lk-MO3" id="xiG-BA-TBA"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view alpha="0.80000000000000004" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jfn-AW-y3G">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <gestureRecognizers/>
+                    <connections>
+                        <outletCollection property="gestureRecognizers" destination="nX1-ET-8wC" appends="YES" id="T9o-S9-iYt"/>
+                    </connections>
+                </view>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="menu_frame" translatesAutoresizingMaskIntoConstraints="NO" id="Gfe-5d-edv">
+                    <rect key="frame" x="0.0" y="488" width="160" height="80"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="Gfe-5d-edv" secondAttribute="height" multiplier="2:1" id="Mvc-a0-siF"/>
+                        <constraint firstAttribute="width" secondItem="Gfe-5d-edv" secondAttribute="height" multiplier="1:2" id="ZeG-YX-Zbt"/>
+                    </constraints>
+                    <variation key="heightClass=compact-widthClass=compact" image="menu_frame_land">
+                        <mask key="constraints">
+                            <exclude reference="Mvc-a0-siF"/>
+                        </mask>
+                    </variation>
+                    <variation key="heightClass=compact-widthClass=regular" image="menu_frame_land">
+                        <mask key="constraints">
+                            <exclude reference="Mvc-a0-siF"/>
+                        </mask>
+                    </variation>
+                    <variation key="heightClass=regular-widthClass=compact">
+                        <mask key="constraints">
+                            <exclude reference="ZeG-YX-Zbt"/>
+                        </mask>
+                    </variation>
+                </imageView>
+                <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background_option" translatesAutoresizingMaskIntoConstraints="NO" id="8GM-6b-OVM" userLabel="background_option_sound">
+                    <rect key="frame" x="64" y="473.5" width="32" height="32"/>
+                    <gestureRecognizers/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="8GM-6b-OVM" secondAttribute="height" multiplier="1:1" id="b0l-Cf-rOa"/>
+                    </constraints>
+                    <connections>
+                        <outletCollection property="gestureRecognizers" destination="aJl-lk-MO3" appends="YES" id="gju-GN-TXf"/>
+                    </connections>
+                </imageView>
+                <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background_option" translatesAutoresizingMaskIntoConstraints="NO" id="Yqz-jP-DP7" userLabel="background_option_exit">
+                    <rect key="frame" x="112" y="493" width="32" height="32"/>
+                    <gestureRecognizers/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="Yqz-jP-DP7" secondAttribute="height" multiplier="1:1" id="mqK-TQ-sPP"/>
+                    </constraints>
+                    <connections>
+                        <outletCollection property="gestureRecognizers" destination="jmG-fL-f2v" appends="YES" id="18q-4w-f06"/>
+                    </connections>
+                </imageView>
+                <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background_option" translatesAutoresizingMaskIntoConstraints="NO" id="qve-Ce-PAO" userLabel="background_option_music">
+                    <rect key="frame" x="16" y="493" width="32" height="32"/>
+                    <gestureRecognizers/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="qve-Ce-PAO" secondAttribute="height" multiplier="1:1" id="tbZ-SB-Mxj"/>
+                    </constraints>
+                    <connections>
+                        <outletCollection property="gestureRecognizers" destination="EXa-vL-PB9" appends="YES" id="qYK-em-Qa3"/>
+                    </connections>
+                </imageView>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_exit" translatesAutoresizingMaskIntoConstraints="NO" id="1Bl-cJ-Pn5">
+                    <rect key="frame" x="121.5" y="502.5" width="13" height="13"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="1Bl-cJ-Pn5" secondAttribute="height" multiplier="1:1" id="YT4-qq-z0V"/>
+                    </constraints>
+                </imageView>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_sound" translatesAutoresizingMaskIntoConstraints="NO" id="Wj8-Zd-gGf">
+                    <rect key="frame" x="73.5" y="483" width="13" height="13"/>
+                </imageView>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_music" translatesAutoresizingMaskIntoConstraints="NO" id="OWk-9Z-0LL">
+                    <rect key="frame" x="25.5" y="502.5" width="13" height="13"/>
+                </imageView>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo_main" translatesAutoresizingMaskIntoConstraints="NO" id="dPl-Po-UHf">
+                    <rect key="frame" x="112" y="199.5" width="96" height="169"/>
+                </imageView>
+                <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="i8h-Ll-ssP">
+                    <rect key="frame" x="89.5" y="22.5" width="141" height="28.5"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" alpha="0.5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="To return press and hold" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Ky-uS-ZlW">
+                            <rect key="frame" x="0.0" y="8.5" width="110.5" height="11.5"/>
+                            <fontDescription key="fontDescription" name="Ubuntu-Regular" family="Ubuntu" pointSize="10"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_touch" translatesAutoresizingMaskIntoConstraints="NO" id="jhH-5O-2II">
+                            <rect key="frame" x="112.5" y="0.0" width="28.5" height="28.5"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="jhH-5O-2II" secondAttribute="height" multiplier="1:1" id="lSe-R1-CSF"/>
+                            </constraints>
+                        </imageView>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="i8h-Ll-ssP" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="bottom" multiplier="0.04" id="0O8-01-hCE"/>
+                <constraint firstItem="dPl-Po-UHf" firstAttribute="width" secondItem="vUN-kp-3ea" secondAttribute="width" multiplier="0.3" id="6rS-9a-WAj"/>
+                <constraint firstItem="Wj8-Zd-gGf" firstAttribute="centerX" secondItem="8GM-6b-OVM" secondAttribute="centerX" id="AOf-tr-rwl"/>
+                <constraint firstItem="qve-Ce-PAO" firstAttribute="top" secondItem="Gfe-5d-edv" secondAttribute="top" multiplier="1.01" id="DWU-Nb-pNw"/>
+                <constraint firstItem="OWk-9Z-0LL" firstAttribute="width" secondItem="qve-Ce-PAO" secondAttribute="width" multiplier="0.4" id="FIB-Ny-v6B"/>
+                <constraint firstItem="Yqz-jP-DP7" firstAttribute="width" secondItem="Gfe-5d-edv" secondAttribute="width" multiplier="0.2" id="GYl-2b-gsM"/>
+                <constraint firstItem="OWk-9Z-0LL" firstAttribute="centerY" secondItem="qve-Ce-PAO" secondAttribute="centerY" id="HrI-bm-Wu3"/>
+                <constraint firstItem="Yqz-jP-DP7" firstAttribute="top" secondItem="Gfe-5d-edv" secondAttribute="top" multiplier="1.01" id="I1J-wM-pEb"/>
+                <constraint firstItem="Wj8-Zd-gGf" firstAttribute="width" secondItem="8GM-6b-OVM" secondAttribute="width" multiplier="0.4" id="JKR-c5-eSs"/>
+                <constraint firstItem="qve-Ce-PAO" firstAttribute="centerX" secondItem="Gfe-5d-edv" secondAttribute="centerX" multiplier="0.4" id="LnT-2r-F9y"/>
+                <constraint firstItem="dPl-Po-UHf" firstAttribute="centerY" secondItem="vUN-kp-3ea" secondAttribute="centerY" id="M9X-i7-fLA"/>
+                <constraint firstItem="Gfe-5d-edv" firstAttribute="height" secondItem="vUN-kp-3ea" secondAttribute="height" multiplier="0.5" id="MUK-Vb-v18"/>
+                <constraint firstItem="Gfe-5d-edv" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="P6n-tX-dts"/>
+                <constraint firstItem="dPl-Po-UHf" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="Pp6-wY-zPb"/>
+                <constraint firstItem="Wj8-Zd-gGf" firstAttribute="height" secondItem="8GM-6b-OVM" secondAttribute="height" multiplier="0.4" id="RxR-vD-72W"/>
+                <constraint firstItem="8GM-6b-OVM" firstAttribute="height" secondItem="Gfe-5d-edv" secondAttribute="height" multiplier="0.2" id="TNz-7P-dmn"/>
+                <constraint firstItem="1Bl-cJ-Pn5" firstAttribute="height" secondItem="Yqz-jP-DP7" secondAttribute="height" multiplier="0.4" id="WHY-XA-QMn"/>
+                <constraint firstItem="OWk-9Z-0LL" firstAttribute="height" secondItem="qve-Ce-PAO" secondAttribute="height" multiplier="0.4" id="a0a-dX-0eb"/>
+                <constraint firstItem="qve-Ce-PAO" firstAttribute="width" secondItem="Gfe-5d-edv" secondAttribute="width" multiplier="0.2" id="a1Z-P5-VZm"/>
+                <constraint firstItem="1Bl-cJ-Pn5" firstAttribute="centerY" secondItem="Yqz-jP-DP7" secondAttribute="centerY" id="b4h-nz-FnF"/>
+                <constraint firstItem="qve-Ce-PAO" firstAttribute="trailing" secondItem="Gfe-5d-edv" secondAttribute="trailing" id="bLZ-HW-EAq"/>
+                <constraint firstItem="Wj8-Zd-gGf" firstAttribute="centerY" secondItem="8GM-6b-OVM" secondAttribute="centerY" id="cWS-aC-Z2b"/>
+                <constraint firstItem="Yqz-jP-DP7" firstAttribute="trailing" secondItem="Gfe-5d-edv" secondAttribute="trailing" multiplier="0.9" id="dWJ-Bt-r8Q"/>
+                <constraint firstItem="i8h-Ll-ssP" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="gW7-Mb-zRw"/>
+                <constraint firstItem="8GM-6b-OVM" firstAttribute="trailing" secondItem="Gfe-5d-edv" secondAttribute="trailing" multiplier="1.2" id="h9L-jZ-cuK"/>
+                <constraint firstItem="Yqz-jP-DP7" firstAttribute="centerY" secondItem="Gfe-5d-edv" secondAttribute="centerY" multiplier="1.6" id="jLu-T5-Hhr"/>
+                <constraint firstItem="qve-Ce-PAO" firstAttribute="centerY" secondItem="Gfe-5d-edv" secondAttribute="centerY" multiplier="0.4" id="kb5-Px-lNw"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="Gfe-5d-edv" secondAttribute="bottom" id="l7r-Nv-edu"/>
+                <constraint firstItem="Yqz-jP-DP7" firstAttribute="centerX" secondItem="Gfe-5d-edv" secondAttribute="centerX" multiplier="1.6" id="mHa-kL-hG3"/>
+                <constraint firstItem="dPl-Po-UHf" firstAttribute="height" secondItem="vUN-kp-3ea" secondAttribute="height" multiplier="0.2" id="pG8-nL-SPx"/>
+                <constraint firstItem="Gfe-5d-edv" firstAttribute="width" secondItem="vUN-kp-3ea" secondAttribute="width" multiplier="0.5" id="qE5-VK-UE9"/>
+                <constraint firstItem="8GM-6b-OVM" firstAttribute="centerX" secondItem="Gfe-5d-edv" secondAttribute="centerX" id="qFM-fR-3Kg"/>
+                <constraint firstItem="Yqz-jP-DP7" firstAttribute="height" secondItem="Gfe-5d-edv" secondAttribute="height" multiplier="0.2" id="qPI-P7-Brd"/>
+                <constraint firstItem="8GM-6b-OVM" firstAttribute="width" secondItem="Gfe-5d-edv" secondAttribute="width" multiplier="0.2" id="rOl-3N-RME"/>
+                <constraint firstItem="8GM-6b-OVM" firstAttribute="centerY" secondItem="Gfe-5d-edv" secondAttribute="centerY" id="ulo-qr-dUF"/>
+                <constraint firstItem="qve-Ce-PAO" firstAttribute="height" secondItem="Gfe-5d-edv" secondAttribute="height" multiplier="0.2" id="vIS-wD-9Rq"/>
+                <constraint firstItem="1Bl-cJ-Pn5" firstAttribute="centerX" secondItem="Yqz-jP-DP7" secondAttribute="centerX" id="vLB-p1-0je"/>
+                <constraint firstItem="Gfe-5d-edv" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="vf9-De-wlR"/>
+                <constraint firstItem="8GM-6b-OVM" firstAttribute="top" secondItem="Gfe-5d-edv" secondAttribute="top" multiplier="0.97" id="x12-10-0Jn"/>
+                <constraint firstItem="OWk-9Z-0LL" firstAttribute="centerX" secondItem="qve-Ce-PAO" secondAttribute="centerX" id="zV3-XK-v5b"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <variation key="heightClass=compact-widthClass=compact">
+                <mask key="constraints">
+                    <exclude reference="l7r-Nv-edu"/>
+                    <exclude reference="6rS-9a-WAj"/>
+                    <exclude reference="qFM-fR-3Kg"/>
+                    <exclude reference="rOl-3N-RME"/>
+                    <exclude reference="x12-10-0Jn"/>
+                    <exclude reference="qE5-VK-UE9"/>
+                    <exclude reference="DWU-Nb-pNw"/>
+                    <exclude reference="LnT-2r-F9y"/>
+                    <exclude reference="a1Z-P5-VZm"/>
+                    <exclude reference="GYl-2b-gsM"/>
+                    <exclude reference="I1J-wM-pEb"/>
+                    <exclude reference="mHa-kL-hG3"/>
+                </mask>
+            </variation>
+            <variation key="heightClass=compact-widthClass=regular">
+                <mask key="constraints">
+                    <exclude reference="l7r-Nv-edu"/>
+                    <exclude reference="6rS-9a-WAj"/>
+                    <exclude reference="qFM-fR-3Kg"/>
+                    <exclude reference="rOl-3N-RME"/>
+                    <exclude reference="x12-10-0Jn"/>
+                    <exclude reference="qE5-VK-UE9"/>
+                    <exclude reference="DWU-Nb-pNw"/>
+                    <exclude reference="LnT-2r-F9y"/>
+                    <exclude reference="a1Z-P5-VZm"/>
+                    <exclude reference="GYl-2b-gsM"/>
+                    <exclude reference="I1J-wM-pEb"/>
+                    <exclude reference="mHa-kL-hG3"/>
+                </mask>
+            </variation>
+            <variation key="heightClass=regular-widthClass=compact">
+                <mask key="constraints">
+                    <exclude reference="pG8-nL-SPx"/>
+                    <exclude reference="TNz-7P-dmn"/>
+                    <exclude reference="h9L-jZ-cuK"/>
+                    <exclude reference="ulo-qr-dUF"/>
+                    <exclude reference="MUK-Vb-v18"/>
+                    <exclude reference="vf9-De-wlR"/>
+                    <exclude reference="bLZ-HW-EAq"/>
+                    <exclude reference="kb5-Px-lNw"/>
+                    <exclude reference="vIS-wD-9Rq"/>
+                    <exclude reference="dWJ-Bt-r8Q"/>
+                    <exclude reference="jLu-T5-Hhr"/>
+                    <exclude reference="qPI-P7-Brd"/>
+                </mask>
+            </variation>
+            <point key="canvasLocation" x="138.75" y="140.49295774647888"/>
+        </view>
+        <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="nX1-ET-8wC"/>
+        <tapGestureRecognizer id="jmG-fL-f2v" userLabel="Exit Tap Gesture Recognizer"/>
+        <tapGestureRecognizer id="aJl-lk-MO3" userLabel="Sound Tap Gesture Recognizer"/>
+        <tapGestureRecognizer id="EXa-vL-PB9" userLabel="Music Tap Gesture Recognizer"/>
+    </objects>
+    <resources>
+        <image name="background_option" width="60" height="60"/>
+        <image name="ic_exit" width="20" height="26.5"/>
+        <image name="ic_music" width="20.5" height="22"/>
+        <image name="ic_sound" width="26" height="23"/>
+        <image name="ic_touch" width="18" height="28.5"/>
+        <image name="logo_main" width="234.5" height="169"/>
+        <image name="menu_frame" width="269" height="135.5"/>
+        <image name="menu_frame_land" width="135.5" height="269.5"/>
+    </resources>
+</document>
